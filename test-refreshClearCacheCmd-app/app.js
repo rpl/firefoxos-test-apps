@@ -1,37 +1,43 @@
 window.onload = function () {
   document.querySelector("#test-localStorage button.get").
-    addEventListener("click", function localStorageGet() {
+    addEventListener("touchstart", function localStorageGet() {
+      console.log("GET 'test-key' from localStorage");
       var value = localStorage.getItem("test-key");
       document.querySelector("#test-localStorage input").value = value;
     }, false);
 
   document.querySelector("#test-localStorage button.set").
-    addEventListener("click", function localStorageSet() {
+    addEventListener("touchstart", function localStorageSet() {
+      console.log("SET 'test-key' from localStorage");
       var value = document.querySelector("#test-localStorage input").value;
       localStorage.setItem("test-key", value || "test1");
     }, false);
 
   document.querySelector("#test-sessionStorage button.get").
-    addEventListener("click", function sessionStorageGet() {
+    addEventListener("touchstart", function sessionStorageGet() {
+      console.log("GET 'test-key' from sessionStorage");
       var value = sessionStorage.getItem("test-key");
       document.querySelector("#test-sessionStorage input").value = value;
     }, false);
 
   document.querySelector("#test-sessionStorage button.set").
-    addEventListener("click", function sessionStorageSet() {
+    addEventListener("touchstart", function sessionStorageSet() {
+      console.log("SET 'test-key' from sessionStorage");
       var value = document.querySelector("#test-sessionStorage input").value;
       sessionStorage.setItem("test-key",  value || "test2");
     }, false);
 
   document.querySelector("#test-cookies button.get").
-    addEventListener("click", function cookiesGet() {
+    addEventListener("touchstart", function cookiesGet() {
+      console.log("GET cookies");
       document.querySelector("#test-cookies input").value = document.cookie;
     }, false);
 
   document.querySelector("#test-cookies button.set").
-    addEventListener("click", function cookiesSet() {
+    addEventListener("touchstart", function cookiesSet() {
+      console.log("SET cookies");
       var value = document.querySelector("#test-cookies input").value;
-      document.cookie = "test=" + value  || "test1";
+      document.cookie = "test=" + value  || "test=value";
     }, false);
 
   var req = navigator.mozApps.getSelf();
