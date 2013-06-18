@@ -42,7 +42,7 @@ window.onload = function () {
     addEventListener("click", function cookiesSet(evt) {
       console.log("SET cookies");
       var value = document.querySelector("#test-cookies input").value;
-      document.cookie = "test=" + value  || "test=value";
+      document.cookie = value ? "test=" + value : "test=value";
       evt.preventDefault();
     }, false);
 
