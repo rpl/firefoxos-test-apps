@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "name": "test-bars",
+  "description": "test-bars",
+  "launch_path": "/index.html",
+  "orientation": "portrait",
+  "icons": {
+    "16": "/icons/testapp-16.png",
+    "48": "/icons/testapp-48.png",
+    "128": "/icons/testapp-128.png"
+  },
+  "installs_allowed_from": ["*"],
+  "developer": {
+    "name": "Luca Greco <luca.greco@alcacoop.it>",
+    "url": "http://github.com/rpl"
+  },
+
+  "default_locale": "en"
+}
